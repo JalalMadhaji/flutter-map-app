@@ -8,6 +8,8 @@ import 'package:provider/provider.dart';
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
 
+  static const String route = "/register";
+
   @override
   _RegisterPageState createState() => _RegisterPageState();
 }
