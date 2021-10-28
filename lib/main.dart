@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map_app/controllers/main_controller.dart';
 import 'package:flutter_map_app/controllers/map_controller.dart';
 import 'package:flutter_map_app/ui/screens/login.dart';
+import 'package:flutter_map_app/ui/screens/map.dart';
+import 'package:flutter_map_app/ui/screens/register.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -24,7 +26,22 @@ class MyApp extends StatelessWidget {
           fontFamily: "expo",
           primarySwatch: Colors.green,
         ),
-        home: const LoginPage(),
+        onGenerateRoute: (RouteSettings routeSettings) {
+          return MaterialPageRoute<void>(
+            settings: routeSettings,
+            builder: (BuildContext context) {
+              switch (routeSettings.name) {
+                case RegisterPage.route:
+                  return const RegisterPage();
+                case MapPage.route:
+                  return const MapPage();
+                case LoginPage.route:
+                default:
+                  return const LoginPage();
+              }
+            },
+          );
+        },
       ),
     );
   }
