@@ -8,6 +8,8 @@ import 'package:provider/provider.dart';
 class MapPage extends StatefulWidget {
   const MapPage({Key? key}) : super(key: key);
 
+  static const String route = "/map";
+
   @override
   _MapPageState createState() => _MapPageState();
 }
