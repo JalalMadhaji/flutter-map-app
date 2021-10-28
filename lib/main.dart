@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map_app/controllers/main_controller.dart';
+import 'package:flutter_map_app/controllers/map_controller.dart';
 import 'package:flutter_map_app/ui/screens/login.dart';
 import 'package:provider/provider.dart';
 
@@ -13,7 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider<MainController>(create: (_) => MainController())
+        ChangeNotifierProvider<MainController>(create: (_) => MainController()),
+        ChangeNotifierProvider<MapController>(create: (_) => MapController()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
