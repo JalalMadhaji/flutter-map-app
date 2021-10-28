@@ -40,10 +40,7 @@ class MainController with ChangeNotifier {
       setLoading(true);
       await Future.delayed(const Duration(seconds: 2));
       setLoading(false);
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const RegisterPage()),
-      );
+      Navigator.pushNamed(context, RegisterPage.route);
     }
   }
 
@@ -63,10 +60,7 @@ class MainController with ChangeNotifier {
       setLoading(true);
       await Future.delayed(const Duration(seconds: 2));
       setLoading(false);
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const MapPage()),
-      );
+      Navigator.pushNamed(context, MapPage.route);
     } else {
       const snackbar = SnackBar(content: Text("Choose Location First"));
       ScaffoldMessenger.of(context).showSnackBar(snackbar);
