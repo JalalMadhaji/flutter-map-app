@@ -7,6 +7,8 @@ import 'package:provider/provider.dart';
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
+  static const String route = "/";
+
   @override
   _LoginPageState createState() => _LoginPageState();
 }
