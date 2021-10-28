@@ -1,0 +1,1 @@
+enum LocationType { country, city }
